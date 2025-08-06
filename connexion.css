@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: #f0f7f4;
+}
+
+.container {
+  display: flex;
+  flex-grow: 1;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Colonne gauche : image */
+.left-side {
+  flex: 1.2; 
+  background: url('assets/pilates-studio.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+/* Colonne droite : formulaire */
+.right-side {
+  flex: 1; 
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+  text-align: center;
+  overflow-y: auto;
+}
+
+/* Logo */
+.logo {
+  margin-bottom: 40px;
+}
+
+.logo img {
+  max-width: 160px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Titre */
+h1 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #2e4a31;
+}
+
+/* Paragraphe */
+p.description {
+  font-size: 1rem;
+  color: #627d5f;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+/* Formulaire */
+form {
+  width: 100%;
+  max-width: 350px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: 2px solid #d0d8cc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+/* Bouton */
+.btn {
+  width: 100%;
+  padding: 14px 0;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3b7a3b;
+}
+
+/* Lien vers inscription */
+.register-link {
+  margin-top: 25px;
+  font-size: 0.95rem;
+  color: #4caf50;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.register-link:hover {
+  color: #3b7a3b;
+}
+
+/* Messages */
+.message {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.message.error {
+  color: #d32f2f;
+}
+
+.message.success {
+  color: #388e3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-side {
+    height: 250px;
+    flex: none;
+  }
+
+  .right-side {
+    flex: none;
+    padding: 40px 20px;
+    max-width: 100%;
+  }
+
+  form {
+    max-width: 100%;
+  }
+}
