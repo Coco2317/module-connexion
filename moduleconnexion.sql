@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 06, 2025 at 10:49 AM
+-- Generation Time: Aug 06, 2025 at 11:12 AM
 -- Server version: 8.4.3
 -- PHP Version: 8.3.16
 
@@ -40,7 +40,7 @@ CREATE TABLE `utilisateurs` (
 --
 
 INSERT INTO `utilisateurs` (`id`, `login`, `prenom`, `nom`, `password`) VALUES
-(1, 'admin', 'admin', 'admin', '$2y$10$J3F8wrzWq64O3yXXzvOdL.SxqHjJcCv1DZ8dI3Syx4JeEbN6oPmRq');
+(1, 'admin', 'admin', 'admin', '$2y$10$zPBqup5gWbNTpZWTAsD9j.CvfdihIJz9oPBEy8lOdYLoKzNV5UT9e');
 
 --
 -- Indexes for dumped tables
