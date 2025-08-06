@@ -4,40 +4,47 @@ require_once 'config.php';
 
 $title = "Administration";
 
-// Vérifie si l’utilisateur est connecté et s’il est bien "admin"
+// Vérifie que l'utilisateur est connecté et est "admin"
 if (!isset($_SESSION['login']) || $_SESSION['login'] !== 'admin') {
     header("Location: index.php");
     exit;
 }
 
-// Récupère tous les utilisateurs
+// Récupère tous les utilisateurs depuis la base
 $result = $conn->query("SELECT id, login, prenom, nom FROM utilisateurs ORDER BY id ASC");
+
+include 'header.php';
 ?>
 
-<?php include 'header.php'; ?>
-
-<h2>Administration</h2>
-<p>Liste de tous les utilisateurs :</p>
-
-<table border="1" cellpadding="8" cellspacing="0">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Login</th>
-            <th>Prénom</th>
-            <th>Nom</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php while ($row = $result->fetch_assoc()): ?>
-            <tr>
-                <td><?php echo htmlspecialchars($row['id']); ?></td>
-                <td><?php echo htmlspecialchars($row['login']); ?></td>
-                <td><?php echo htmlspecialchars($row['prenom']); ?></td>
-                <td><?php echo htmlspecialchars($row['nom']); ?></td>
-            </tr>
-        <?php endwhile; ?>
-    </tbody>
-</table>
+<main>
+    <h2>Administration</h2>
+    <p>Liste de tous les utilisateurs :</p> 
+    <br>
+    
+    <?php if ($result && $result->num_rows > 0): ?>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Login</th>
+                    <th>Prénom</th>
+                    <th>Nom</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php while ($row = $result->fetch_assoc()): ?>
+                    <tr>
+                        <td><?= htmlspecialchars($row['id']) ?></td>
+                        <td><?= htmlspecialchars($row['login']) ?></td>
+                        <td><?= htmlspecialchars($row['prenom']) ?></td>
+                        <td><?= htmlspecialchars($row['nom']) ?></td>
+                    </tr>
+                <?php endwhile; ?>
+            </tbody>
+        </table>
+    <?php else: ?>
+        <p>Aucun utilisateur trouvé dans la base de données.</p>
+    <?php endif; ?>
+</main>
 
 <?php include 'footer.php'; ?>
