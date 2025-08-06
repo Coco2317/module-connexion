@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Prépare une requête pour chercher l'utilisateur avec ce login
         $stmt = $conn->prepare("SELECT id, login, prenom, nom, password FROM utilisateurs WHERE login = ?");
         if ($stmt) {
-            $stmt->bind_param("string", $login); 
+            $stmt->bind_param("s", $login); 
             $stmt->execute(); 
             $result = $stmt->get_result(); // 
 
