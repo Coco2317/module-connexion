@@ -1,0 +1,145 @@
+/* Reset basique */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f6f1eb; /* beige clair */
+  color: #3a3a2e; /* marron foncé */
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+header a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 12px;
+  color: #588157; /* vert chaud */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header a:hover {
+  color: #3a5a40;
+}
+
+/* Main */
+main {
+  flex-grow: 1;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+/* Titre */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #588157;
+  font-weight: 700;
+}
+
+/* Messages */
+p.success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  text-align: center;
+  font-weight: 600;
+}
+
+p.error {
+  color: #a94442;
+  background-color: #f2dede;
+  border: 1px solid #ebcccc;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Formulaire */
+form {
+  padding: 20px 25px;
+  background: #fffdf8;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e0d6c3;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-weight: 500;
+  margin-bottom: 14px;
+  color: #5c5346;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #cfc4b3;
+  border-radius: 10px;
+  background-color: #fdfaf6;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+  border-color: #a3b18a;
+  outline: none;
+  background-color: #fff;
+}
+
+button {
+  background-color: #a3b18a;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #6b705c;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  body, html {
+    padding: 20px 10px;
+  }
+  main {
+    max-width: 100%;
+  }
+  form {
+    padding: 18px 15px;
+  }
+}
