@@ -1,0 +1,120 @@
+/* Reset de base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f9f6f1;
+  color: #333;
+  padding: 30px 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header a {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 10px;
+  color: #588157;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header a:hover {
+  color: #3a5a40;
+}
+
+/* Main content */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0d6c3;
+}
+
+/* Titres */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #588157;
+}
+
+p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+/* Tableau */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f0ead6;
+  color: #3a3a2e;
+  font-weight: 600;
+}
+
+td {
+  background-color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  main {
+    padding: 20px;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ccc;
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  td::before {
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #5c5346;
+  }
+
+  td:nth-of-type(1)::before { content: "ID"; }
+  td:nth-of-type(2)::before { content: "Login"; }
+  td:nth-of-type(3)::before { content: "Prénom"; }
+  td:nth-of-type(4)::before { content: "Nom"; }
+}
