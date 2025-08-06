@@ -1,0 +1,120 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f3efe6, #e8e1d6); /* Beige doux */
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  margin: 0;
+}
+
+.container {
+  position: relative; /* Nécessaire pour positionner le lien à l'intérieur */
+  background-color: #fffdf8; /* Blanc cassé */
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid #e0d6c3;
+}
+
+h2 {
+  text-align: center;
+  color: #6b705c; /* Vert olive foncé */
+  margin-bottom: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #5c5346; /* Marron doux */
+}
+
+form input {
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #cfc4b3;
+  border-radius: 10px;
+  background-color: #fdfaf6;
+  transition: 0.3s;
+}
+
+form input:focus {
+  border-color: #a3b18a; /* Vert tendre */
+  outline: none;
+  background-color: #fff;
+}
+
+button {
+  background-color: #a3b18a; /* Vert doux */
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #6b705c; /* Vert olive foncé */
+}
+
+.error {
+  color: #a94442;
+  background-color: #f2dede;
+  border: 1px solid #ebcccc;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.link {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 14px;
+  color: #5c5346;
+}
+
+.link a {
+  color: #a3b18a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+/* Lien retour Accueil (coin haut droite de .container) */
+.back-link {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-decoration: none;
+  color: #a3b18a; /* Vert doux */
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: #6b705c; /* Vert olive foncé */
+}
